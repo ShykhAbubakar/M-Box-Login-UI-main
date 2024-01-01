@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Scaffold(
@@ -20,13 +20,38 @@ class MyApp extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset('images/logo.png', width: 50, height: 50,),
-                SizedBox(height: 20),
-                Text(
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      'images/logo.png',
+                      width: 50,
+                      height: 50,
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    const Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Maintenance',
+                          style: TextStyle(
+                              fontFamily: 'Rubik Medium', fontSize: 16),
+                        ),
+                        Text('Box', style: TextStyle(fontFamily: 'Rubik Medium'),),
+                      ],
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 20),
+                const Text(
                   'Login',
                   style: TextStyle(fontFamily: 'Rubik Medium', fontSize: 20),
                 ),
-                Text('Buy Cars Instantly with Us!'),
+                const Text('Buy Cars Instantly with Us!'),
+
               ],
             ),
           ),
