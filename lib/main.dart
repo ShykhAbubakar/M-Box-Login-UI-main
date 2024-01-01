@@ -54,7 +54,7 @@ class MyApp extends StatelessWidget {
                   style: TextStyle(fontFamily: 'Rubik Medium', fontSize: 20),
                 ),
                 const Text('Buy Cars Instantly with Us!'),
-                SizedBox(height: 50),
+                SizedBox(height: 100),
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: TextFormField(
@@ -103,6 +103,20 @@ class MyApp extends StatelessWidget {
                     ],
                   ),
                 ),
+                SizedBox(height: 120),
+                Container(
+                  width: 350,
+                  height: 50,
+                  color: Colors.deepOrange,
+                  child: const Center(
+                      child: Text(
+                    'Login',
+                    style: TextStyle(
+                        fontFamily: 'Rubik Medium ',
+                        fontSize: 18,
+                        color: Colors.white),
+                  )),
+                )
               ],
             ),
           ),
