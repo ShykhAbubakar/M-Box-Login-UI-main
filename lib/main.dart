@@ -40,7 +40,10 @@ class MyApp extends StatelessWidget {
                           style: TextStyle(
                               fontFamily: 'Rubik Medium', fontSize: 16),
                         ),
-                        Text('Box', style: TextStyle(fontFamily: 'Rubik Medium'),),
+                        Text(
+                          'Box',
+                          style: TextStyle(fontFamily: 'Rubik Medium'),
+                        ),
                       ],
                     ),
                   ],
@@ -51,7 +54,55 @@ class MyApp extends StatelessWidget {
                   style: TextStyle(fontFamily: 'Rubik Medium', fontSize: 20),
                 ),
                 const Text('Buy Cars Instantly with Us!'),
-
+                SizedBox(height: 50),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                        hintText: 'Email',
+                        hintStyle: const TextStyle(
+                            fontFamily: 'Rubik Medium', fontSize: 18),
+                        prefixIcon: Icon(Icons.email_rounded),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: BorderSide(color: Colors.black),
+                        )),
+                  ),
+                ),
+                Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                            hintText: 'Password',
+                            hintStyle: const TextStyle(
+                                fontFamily: 'Rubik Medium', fontSize: 18),
+                            prefixIcon: Icon(Icons.lock),
+                            suffixIcon: Icon(Icons.visibility_off),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10),
+                              borderSide: BorderSide(color: Colors.black),
+                            )),
+                      ),
+                    ),
+                  ],
+                ),
+                const Padding(
+                  padding: EdgeInsets.all(18),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text(
+                        'Forgot Password?',
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontFamily: 'Rubik Medium',
+                            decoration: TextDecoration.underline),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
