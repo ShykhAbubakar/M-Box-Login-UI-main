@@ -103,11 +103,14 @@ class MyApp extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 120),
+                const SizedBox(height: 100),
                 Container(
                   width: 350,
                   height: 50,
-                  color: Colors.deepOrange,
+                  decoration: BoxDecoration(
+                    color: Colors.deepOrange,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                   child: const Center(
                       child: Text(
                     'Login',
@@ -116,7 +119,25 @@ class MyApp extends StatelessWidget {
                         fontSize: 18,
                         color: Colors.white),
                   )),
-                )
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Dont have account?',
+                      style:
+                          TextStyle(fontFamily: 'Rubik Medium ', fontSize: 16),
+                    ),
+                    Text(
+                      'SignUp',
+                      style: TextStyle(
+                          fontFamily: 'Rubik Medium', color: Colors.deepOrange),
+                    )
+                  ],
+                ),
               ],
             ),
           ),
